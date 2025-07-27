@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Car Attribute Display</title>
+</head>
+<body>
+
+    <p id="carColorDisplay"></p>
+    <p id="carMakeDisplay"></p>
+
+    <script>
+        let car = {
+            color: "blue",
+            make: "Toyota",
+            model: "Camry"
+        };
+
+        const colorDisplayElement = document.getElementById('carColorDisplay');
+        colorDisplayElement.textContent = "Car Color: " + car.color;
+        colorDisplayElement.style.backgroundColor = "lightgray";
+
+        const makeDisplayElement = document.getElementById('carMakeDisplay');
+        makeDisplayElement.textContent = "Car Make: " + car.make;
+        makeDisplayElement.style.backgroundColor = "lightgray";
+    </script>
+
+</body>
+</html>
+
+<!--
+const:
+This is a JavaScript keyword used to declare a variable.
+When you declare a variable with const, it means:
+It's a constant reference: Once you assign a value to it, you cannot reassign it to a different value later in the code. 
+In this case, colorDisplayElement will always refer to the HTML <p> element with id="carColorDisplay".
+
+It cannot be redeclared: You cannot use const colorDisplayElement again in the same scope. 
+This is why your previous code had an error when you tried to declare displayElement twice.
+
+Usefulness of const: It helps prevent accidental reassignments and makes your code more predictable. 
+If you know a variable's reference won't change, const is the preferred way to declare it.
+
+colorDisplayElement:
+This is the variable name you chose.
+It's a descriptive name that tells you what the variable holds.
+
+Its use is to store a reference to the HTML element that document.getElementById('carColorDisplay') returns.
+
+By storing this reference, you can then perform multiple operations on that specific HTML element without having to repeatedly call document.getElementById('carColorDisplay') every single time.
+-->
