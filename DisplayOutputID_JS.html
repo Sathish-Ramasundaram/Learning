@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hello World</title>
+</head>
+<body>
+
+    <p id="output"></p>
+
+    <script>
+        document.getElementById('output').textContent = "Hello World!";
+    </script>
+
+</body>
+</html>
+
+<!-- 
+p - paragraph
+
+id="output" - Attribute
+The id attribute provides a unique identifier for an HTML element within the entire document. 
+No two elements on the same page should have the same id value.
+In this specific case, giving the paragraph the id of "output" makes it easy for JavaScript to find and interact with this particular paragraph. 
+When JavaScript uses document.getElementById('output'), it's looking for exactly this element by its unique ID.
+
+<script> - JavaScript code
+used to embed or reference executable code, most commonly JavaScript.
+So, while <script> itself is an HTML element, its primary purpose is to contain or link to JavaScript code.
+<script>
+    // --- JavaScript Code Starts Here ---
+    // ... your JavaScript code ...
+    // --- JavaScript Code Ends Here ---
+</script>
+
+document - built in, global JavaScript object that represents the entire HTML document loaded in the browser. 
+It's your main entry point to interact with the web page's structure, content, and style. 
+
+.getElementById('output'):
+This is a method (a function associated with an object) of the document object.
+Its purpose is to find an HTML element within the document that has an id attribute matching the string provided in the parentheses (in this case, 'output').
+In your HTML, you have <p id="output"></p>, so this part successfully locates that specific paragraph element.
+
+.textContent:
+This is a property of an HTML element object (like the one returned by getElementById).
+It represents the plain text content inside that HTML element, ignoring any HTML tags within it.
+When you use it on the left side of an assignment (=), you are setting or changing the text content of that element.
+
+"Hello World!" is simply a string literal – the actual text you want to display.
+-->
