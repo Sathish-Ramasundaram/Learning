@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Car Attributes Display</title>
+</head>
+<body>
+    <p id="carColor"></p>
+    <p id="carMake"></p>
+    <p id="carModel"></p>
+
+    <script>
+        let car = {
+            color: "blue",
+            make: "Toyota",
+            model: "Camry"
+        };
+
+        document.getElementById('carColor').textContent = "Car Color: " + car.color;
+        document.getElementById('carMake').textContent = "Car Make: " + car.make;
+        document.getElementById('carModel').textContent = "Car Model: " + car.model;
+    </script>
+
+</body>
+</html>
+
+<!--
+id="carColor": This is an HTML attribute applied to the <p> tag.
+id : unique identifier
+carColor : value of the id attribute
+
+let car = { color: "blue", make: "Toyota", model: "Camry" };
+This is a JavaScript statement that defines an object
+
+let: This is a JavaScript keyword used to declare a variable. 
+let creates a block-scoped variable that can be reassigned later.
+
+car: This is the variable name you've chosen for your object. It will hold the entire object definition.
+
+color is the key (or property name).
+"blue" is the value associated with the color key.
+
+make: "Toyota": Another property, where make is the key and "Toyota" is the value.
+model: "Camry": Another property, where model is the key and "Camry" is the value.
+
+"Car Color: ": This is a string literal. It's the fixed text part of the message you want to display.
++: This is the concatenation operator. In JavaScript, when used with strings, it joins them together.
+
+car.color: This accesses the color property of the car object you defined earlier. 
+It will evaluate to the string "blue".
+
+-->
