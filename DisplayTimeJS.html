@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First JavaScript</h2>
+
+<button type="button" 
+onclick="document.getElementById('display').innerHTML = Date()"> 
+
+Click me to display Date and Time.</button>
+
+<p id="display"></p>
+
+</body>
+</html> 
+
+<!--
+type="button" generic clickable button 
+"generic" implies that it's a blank slate for your JavaScript code to define its purpose.
+Here's why it's called generic:
+type="submit": This button type specifically tells the browser to submit the form it's part of when clicked. This is a non-generic, predefined behavior.
+type="reset": This button type specifically tells the browser to reset all the form fields to their initial values when clicked. This is also a non-generic, predefined behavior.
+type="button": This type simply creates a clickable button that does nothing by default. It's "generic" because it doesn't come with any pre-wired actions. You, as the developer, are expected to attach custom behavior to it using JavaScript (like your onclick attribute to display the date and time).
+
+onclick: 
+This is a standard HTML event attribute. 
+It's how you tell the browser to execute JavaScript code when the element is clicked.
+
+document: 
+This is a standard, built-in JavaScript object that represents the entire HTML document 
+(the Document Object Model, or DOM). 
+You'll almost always start with document when interacting with elements on the page.
+
+.getElementById(): This is a standard JavaScript method available on the document object. 
+Its purpose is to find an HTML element by its unique id.
+
+.innerHTML: 
+This is a standard JavaScript property of an HTML element. 
+It's used to get or set the HTML content inside an element.
+innerHTML represents the HTML content (including any HTML tags) inside an element. 
+When you assign a value to innerHTML, it replaces the existing content of that element with the new value, and if the new value contains HTML tags, the browser will render those tags.
+
+Why this name? 
+The name innerHTML literally means "the HTML content that is inside this element." 
+It distinguishes itself from other properties like outerHTML (which includes the element's own tag) or textContent (which only deals with plain text).
+
+Both innerHTML and textContent will correctly display plain text.
+
+The difference between innerHTML and textContent becomes crucial when the content you are setting or getting contains HTML tags:
+If you set element.innerHTML = "<b>Hello</b> World!", the browser will render "Hello" in bold.
+If you set element.textContent = "<b>Hello</b> World!", the browser will literally display the string "<b>Hello</b> World!" (including the <b> tags) as plain text, without rendering "Hello" in bold.
+Since Date() only provides plain text, either innerHTML or textContent works equally well for displaying the date and time.
+
+Date(): 
+This is a standard, built-in JavaScript function/constructor that returns a string representation of the current date and time.
+
+-->
