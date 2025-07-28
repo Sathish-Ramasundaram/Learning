@@ -5,8 +5,17 @@
 </head>
 <body>
 
-    <p id="output"></p>
     <script src="external.js" defer></script>
+    <p id="output"></p>
 
 </body>
 </html>
+
+<!--
+defer : f the defer attribute is eliminated from <script src="script.js" defer></script>, the code will not produce the output correctly in your current setup.
+
+If your JavaScript needs to interact with HTML elements that appear later in the HTML document:
+You must either use the defer attribute on your <script> tag (which tells the browser to run the script after the HTML is parsed).
+OR, you must place your <script> tag at the very end of the <body> section, just before </body>. This ensures all HTML elements are parsed and available before the script runs.
+
+-->
